@@ -7,6 +7,10 @@ class Echo
   def talk
     p "say something:"
     user = gets.chomp
-    return "#{@date} | #{@time} | You said: " + "'#{user}'!"
+      if user == "exit"
+        p "Goodbye!"
+      else
+        p "#{@date} | #{@time} | You said: " + "'#{user}'!"
+      end
   end
 end
