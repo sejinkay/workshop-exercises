@@ -19,6 +19,16 @@ describe Shop do
     end
   end
 
+  context 'it returns the price of the multiple items' do
+    it 'gives you the price for Item AA' do
+      expect(subject.checkout('AA')).to eq 100
+    end
+
+    it 'gives you the price for Item ABCD' do
+      expect(subject.checkout('ABCD')).to eq 115
+    end
+  end
+
   it 'gives you -1 for illegal input' do
     expect(subject.checkout('a')).to eq -1
   end

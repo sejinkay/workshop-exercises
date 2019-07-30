@@ -1,15 +1,19 @@
 class Shop
   def checkout(items)
-    if items == "A"
-      50
-    elsif items == "B"
-      30
-    elsif items == "C"
-      20
-    elsif items == "D"
-      15
-    else
-      -1
+    price = 0
+    items.chars.each do |item|
+      if item == "A"
+        price += 50
+      elsif item == "B"
+        price += 30
+      elsif item == "C"
+        price += 20
+      elsif item == "D"
+        price += 15
+      else
+        price = -1
+      end
     end
+    return price
   end
 end
