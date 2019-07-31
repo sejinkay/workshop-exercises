@@ -1,7 +1,7 @@
 class Shop
   def checkout(items)
     price = 0
-    items.chars.each do |item|
+    items.to_s.chars.each do |item|
       if item == "A"
         price += 50
       elsif item == "B"

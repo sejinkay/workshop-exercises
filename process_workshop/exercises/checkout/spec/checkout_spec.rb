@@ -29,7 +29,17 @@ describe Shop do
     end
   end
 
-  it 'gives you -1 for illegal input' do
-    expect(subject.checkout('a')).to eq -1
+  context 'gives you -1 for illegal input' do
+    it 'gives you -1 for illegal input a' do
+      expect(subject.checkout('a')).to eq -1
+    end
+
+    it 'gives you -1 for illegal input aBc' do
+      expect(subject.checkout('aBc')).to eq -1
+    end
+
+    it 'gives you -1 for illegal input 18' do
+      expect(subject.checkout(18)).to eq -1
+    end
   end
 end
